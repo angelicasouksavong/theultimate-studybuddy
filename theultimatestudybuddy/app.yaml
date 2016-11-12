@@ -18,6 +18,9 @@ handlers:
 - url: /stylesheet\.css
   static_files: templates/stylesheet.css
   upload: templates/stylesheet\.css
+
 libraries:
 - name: webapp2
   version: "2.5.2"
+- name: jinja2
+  version: latest
