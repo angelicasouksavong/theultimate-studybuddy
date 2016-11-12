@@ -16,9 +16,17 @@
 #
 
 import webapp2
+import jinja2
+import os
+import datetime
+import time
 
 from google.appengine.api import users
 from google.appengine.ext import ndb
+
+template_dir = os.path.join(os.path.dirname(__file__), 'templates')
+jinja_environment = jinja2.Environment(
+    loader=jinja2.FileSystemLoader(template_dir))
 
 class CssiUser(ndb.Model):
   """CssiUser stores information about a logged-in user.
@@ -124,5 +132,5 @@ app = webapp2.WSGIApplication([
   ('/flashcards', FlashcardsHandler),
   ('/memo', MemoHandler),
   ('/pun', PunHandler),
-  ('/test', TestHandler))
+  ('/test', TestHandler),
 ], debug=True)
