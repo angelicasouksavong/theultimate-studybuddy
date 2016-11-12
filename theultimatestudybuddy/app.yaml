@@ -23,6 +23,9 @@ handlers:
   static_files: scripts/home.js
   upload: scripts/home\.js
 
+- url: /scripts
+  static_dir: scripts
+
 libraries:
 - name: webapp2
   version: "2.5.2"
