@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+  <script src="event.js"></script>
+</head>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
-	<a href="/study">Study Corner</a>
-	<a href="/calendar">Calendar</a>
-  <a href="/test">Exam Countdown</a>
-  <a href="/memo">Memo Pad</a>
-  <a href="/flashcards">Flashcards</a>
-  <a href="/pun">Pun of the Day</a>
+<div>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+  	<a href="/study">Study Corner</a>
+  	<a href="/calendar">Calendar</a>
+    <a href="/test">Exam Countdown</a>
+    <a href="/memo">Memo Pad</a>
+    <a href="/flashcards">Flashcards</a>
+    <a href="/pun">Pun of the Day</a>
+  </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰MENU</span>
 </div>
