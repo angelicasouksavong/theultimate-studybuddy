@@ -33,7 +33,7 @@ class CssiUser(ndb.Model):
   first_name = ndb.StringProperty()
   last_name = ndb.StringProperty()
 
-class MainHandler(webapp2.RequestHandler):
+class SignInHandler(webapp2.RequestHandler):
   def get(self):
     user = users.get_current_user()
     # If the user is logged in...
@@ -117,8 +117,8 @@ class TestHandler(webapp2.RequestHandler):
         self.response.out.write(template.render())
 
 app = webapp2.WSGIApplication([
-  ('/', MainHandler),
-  ('/home', HomeHandler),
+  ('/signin', SignInHandler),
+  ('/', HomeHandler),
   ('/study', StudyHandler),
   ('/calendar', CalendarHandler),
   ('/flashcards', FlashcardsHandler),
