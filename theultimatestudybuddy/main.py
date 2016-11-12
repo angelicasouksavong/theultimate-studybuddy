@@ -81,6 +81,48 @@ class MainHandler(webapp2.RequestHandler):
     self.response.write('Thanks for signing up, %s!' %
         cssi_user.first_name)
 
+class HomeHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('home.html')
+        self.response.out.write(template.render())
+
+class StudyHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('studyCorner.html')
+        self.response.out.write(template.render())
+
+class CalendarHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('calendar.html')
+        self.response.out.write(template.render())
+
+class FlashcardsHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('flashcards.html')
+        self.response.out.write(template.render())
+
+class MemoHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('memo.html')
+        self.response.out.write(template.render())
+
+class PunHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('punOfTheDay.html')
+        self.response.out.write(template.render())
+
+class TestHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('testCountdown.html')
+        self.response.out.write(template.render())
+
 app = webapp2.WSGIApplication([
-  ('/', MainHandler)
+  ('/', MainHandler),
+  ('/home', HomeHandler),
+  ('/study', StudyHandler),
+  ('/calendar', CalendarHandler),
+  ('/flashcards', FlashcardsHandler),
+  ('/memo', MemoHandler),
+  ('/pun', PunHandler),
+  ('/test', TestHandler))
 ], debug=True)
