@@ -15,9 +15,13 @@ handlers:
 - url: /static
   static_dir: static
 
-- url: /stylesheet\.css
-  static_files: templates/stylesheet.css
-  upload: templates/stylesheet\.css
+- url: /home\.css
+  static_files: templates/home.css
+  upload: templates/home\.css
+
+- url: /home\.js
+  static_files: scripts/home.js
+  upload: scripts/home\.js
 
 libraries:
 - name: webapp2
