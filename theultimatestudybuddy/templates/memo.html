@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+  <script src="event.js"></script>
+</head>
+
+<body ID="memoPage">
+
+  <div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+    	<a href="/study">Study Corner</a>
+    	<a href="/calendar">Calendar</a>
+      <a href="/test">Exam Countdown</a>
+      <a href="/memo">Memo Pad</a>
+      <a href="/flashcards">Flashcards</a>
+      <a href="/pun">Pun of the Day</a>
+    </div>
+    <div id="main">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰MENU</span>
+    </div>
+  </div>
+  <h1>Welcome to the Memo Pad</h1>
+
+  <h2>Record all of your upcoming events such as homeworks, labs, quizzes, etc.</h2>
+
+  <style>
+    body{
+      background-image: url("https://images.sampletemplates.com/wp-content/uploads/2015/06/04175851/Lined-Paper-College-Ruled-Template.jpg")
+    }
+  </style>
+
+  <div>
+    <ul><input type="checkbox" value="memo">Do homework</ul>
+    <ul><input type="checkbox" value="memo">Study for upcoming exam</ul>
+    <ul><input type="checkbox" value="memo">Study for upcoming quiz</ul>
+    <ul><input type="checkbox" value="memo">Do more homework</ul>
+    <ul><input type="checkbox" value="memo">Color to de-stress</ul>
+    <ul><input type="checkbox" value="memo">Code a little bit</ul>
+    <ul><input type="checkbox" value="memo">Look up some bad puns and jokes</ul>
+    <ul><input type="checkbox" value="memo">Watch an episode of Friends</ul>
+    <ul><input type="checkbox" value="memo">Eat a giant bowl of ice cream</ul>
+  </div>
