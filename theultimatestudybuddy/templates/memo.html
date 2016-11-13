@@ -31,14 +31,15 @@
     }
   </style>
 
-  <div>
-    <ul><input type="checkbox" value="memo">Do homework</ul>
-    <ul><input type="checkbox" value="memo">Study for upcoming exam</ul>
-    <ul><input type="checkbox" value="memo">Study for upcoming quiz</ul>
-    <ul><input type="checkbox" value="memo">Do more homework</ul>
-    <ul><input type="checkbox" value="memo">Color to de-stress</ul>
-    <ul><input type="checkbox" value="memo">Code a little bit</ul>
-    <ul><input type="checkbox" value="memo">Look up some bad puns and jokes</ul>
-    <ul><input type="checkbox" value="memo">Watch an episode of Friends</ul>
-    <ul><input type="checkbox" value="memo">Eat a giant bowl of ice cream</ul>
+  <div id="check">
+    <input type="text" class="txt" value="" />
+    <button type="button" class="btn">Add Button</button>
   </div>
+
+  <script>
+    $(document).ready(function () {
+      $(".btn").on('click', function () {
+        $('#check').append('<input type="checkbox" name="myCheckbox" />') + $(".txt")
+      });
+    })
+  </script>
