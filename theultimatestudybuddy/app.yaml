@@ -15,16 +15,16 @@ handlers:
 - url: /static
   static_dir: static
 
-- url: /home\.js
-  static_files: home.js
-  upload: home\.js
-
-- url: /scripts
-  static_dir: scripts
-
 - url: /home\.css
   static_files: templates/home.css
   upload: templates/home\.css
+
+- url: /home\.js
+  static_files: scripts/home.js
+  upload: scripts/home\.js
+
+- url: /scripts
+  static_dir: scripts
 
 libraries:
 - name: webapp2
