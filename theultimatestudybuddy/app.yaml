@@ -22,9 +22,9 @@ handlers:
 - url: /scripts
   static_dir: scripts
 
-- url: /stylesheet\.css
-  static_files: templates/stylesheet.css
-  upload: templates/stylesheet\.css
+- url: /home\.css
+  static_files: templates/home.css
+  upload: templates/home\.css
 
 libraries:
 - name: webapp2
