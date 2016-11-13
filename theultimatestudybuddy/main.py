@@ -28,8 +28,8 @@ template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(template_dir))
 
-class CssiUser(ndb.Model):
-  """CssiUser stores information about a logged-in user.
+"""class CssiUser(ndb.Model):
+ CssiUser stores information about a logged-in user.
 
   The AppEngine users api stores just a couple of pieces of
   info about logged-in users: a unique id and their email address.
@@ -37,7 +37,7 @@ class CssiUser(ndb.Model):
   If you want to store more info (e.g. their real name, high score,
   preferences, etc, you need to create a Datastore model like this
   example).
-  """
+
   first_name = ndb.StringProperty()
   last_name = ndb.StringProperty()
 
@@ -87,9 +87,9 @@ class SignInHandler(webapp2.RequestHandler):
         id=user.user_id())
     cssi_user.put()
     self.response.write('Thanks for signing up, %s!' %
-        cssi_user.first_name)
+        cssi_user.first_name)"""
 
-class HomeHandler(webapp2.RequestHandler):
+class MainHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('home.html')
         self.response.out.write(template.render())
@@ -125,8 +125,8 @@ class TestHandler(webapp2.RequestHandler):
         self.response.out.write(template.render())
 
 app = webapp2.WSGIApplication([
-  ('/signin', SignInHandler),
-  ('/', HomeHandler),
+ # ('/signin', SignInHandler),
+  ('/', MainHandler),
   ('/study', StudyHandler),
   ('/calendar', CalendarHandler),
   ('/flashcards', FlashcardsHandler),
